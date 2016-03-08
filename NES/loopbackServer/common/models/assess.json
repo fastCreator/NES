@@ -1,0 +1,35 @@
+{
+  "name": "assess",
+  "plural": "assess",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "searchText": {
+      "type": "string",
+      "required": true
+    },
+    "imgs": {
+      "type": [
+        "string"
+      ]
+    },
+    "statement": {
+      "type": "string",
+      "required": true
+    },
+    "grade": {
+      "type": "number"
+    },
+    "user": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,32 @@
+extends layout
+block content
+    a.logo(href="/#/index")
+    div.main
+        form(name="myForm")
+            div.input
+                span.glyphicon.glyphicon-user
+                input(type="text",ng-required="{true}",ng-model="data.username")
+            div.input
+                span.glyphicon.glyphicon-eye-close
+                input(type="password",ng-required="{true}",ng-model="data.password")
+            input.login(ng-click="login()" ,ng-disabled="myForm.$invalid" ,type="submit", value="登陆" )
+        div
+            a.register(href="/register") 免费注册
+            span.remember 是否记住登陆状态:
+                input(type="checkbox",ng-model="remember")
+        div.center 其他账号登陆
+        div.otherLogin
+            a(href="http://localhost:5500/auth/github")
+                img(src="/images/otherLogin/github.png")
+            a(href="http://localhost:5500/auth/qq")
+                img(src="/images/otherLogin/qq.png")
+            a(href="http://localhost:5500/auth/weixin")
+                img(src="/images/otherLogin/weixin.png")
+            a(href="http://localhost:5500/auth/sina")
+                img(src="/images/otherLogin/xinlang.png")
+
+block scripts
+    script(src='/javascripts/app/dist/loginController.min.js')
+    link(rel='stylesheet', href='/stylesheets/login.css')
+
+

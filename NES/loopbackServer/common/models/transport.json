@@ -1,0 +1,48 @@
+{
+    "name": "transport",
+    "plural": "/transport",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "fare": {
+            "type": "number"
+        },
+        "price": {
+            "type": "number"
+        },
+        "username": {
+            "type": "string"
+        },
+        "data": {
+            "type": "string"
+        },
+        "address": {
+            "type": "string",
+            "required": true
+        },
+        "remarks": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string",
+            "required": true
+        },
+        "shops": {
+            "type": [
+                "any"
+            ],
+            "required": true
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}

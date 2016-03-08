@@ -1,0 +1,128 @@
+form#myForm(name="myForm",method='POST',action='/shopuser/upload',enctype="multipart/form-data",ng-if="enteringId")
+    input(name="myShop",type="hidden",value="{{myShop}}")
+    table
+        tr
+            td
+                em.glyphicon.glyphicon-asterisk
+                商品查找文本
+            td
+                input(type="text",ng-model="myShop.searchText",ng-required="{true}")
+        tr
+            td
+                em.glyphicon.glyphicon-asterisk
+                购物面板图片(推荐使用200x200)
+            td
+                input(type="file",name="_1_200x200",ng-required="{true}",accept=".jpg")
+        tr
+            td 选择属性图片(推荐使用60x60)
+            td
+                input(type="file",name="_1_60x60",accept=".jpg")
+        tr
+            td
+                3D皮肤数量
+            td
+                input(type="number",ng-model="myShop.D3Numb")
+        tr
+            td 上传3D商品皮肤
+            td
+                imgs(name="_jpg",max_numb="3",min_numb="0",type="file",bind_numb="myShop.D3Numb")
+        tr
+            td 3D模型obj
+            td
+                input(type="file",name="_obj",accept=".obj")
+        tr
+            td 3D模型mtl
+            td
+                input(type="file",name="_mtl",accept=".mtl")
+        tr
+            td
+                em.glyphicon.glyphicon-asterisk
+                展示放大图片数量
+            td
+                input(type="number",ng-model="myShop.imgNumb",ng-required="{true}")
+        tr
+            td 上传展示放大图片(请上传5-8张图片)(推荐使用800x800)
+            td
+                imgs(name="_800x800",max_numb="8",min_numb="5",type="file",bind_numb="myShop.imgNumb")
+        tr
+            td
+                em.glyphicon.glyphicon-asterisk
+                商品名称
+            td
+                input(type="text",ng-model="myShop.displayName",ng-required="{true}")
+        tr
+            td
+                em.glyphicon.glyphicon-asterisk
+                商品介绍
+            td
+                input(type="text",ng-model="myShop.introduce",ng-required="{true}")
+        tr
+            td
+                em.glyphicon.glyphicon-asterisk
+                价格
+            td
+                input(type="text",ng-model="myShop.price",ng-required="{true}",ng-pattern="/^\\d*\.?\\d*$/")
+        tr
+             td 相关商品属性
+             td
+                input(type="text",ng-model="myShop.link[0]")
+        tr
+            td 相关商品ID(最多5个)
+            td
+                -for(var i=0;i<4;i++){
+                input(type="text",ng-model="myShop.link["+(i+1)+"]")
+                br
+                -}
+                input(type="text",ng-model="myShop.link[5]")
+        tr
+            td 商品副属性名(最多两层)
+            td
+                input(type="text",ng-model="myShop.classifyNumb[0]")
+                input(type="text",ng-model="myShop.classifyNumb[1]")
+        tr
+            td 添加商品副属性数量
+            td
+                input.btn.btn-primary(type="button",ng-click="addClassify()",value="添加")
+        tr
+            td 商品副属性(格式:父属性/子属性/子属性...)
+            td.classify
+                div(ng-repeat="classify in myShop.classify track by $index")
+                    input(ng-repeat="class in myShop.classify[$index] track by $index",type="text",ng-model="myShop.classify[$parent.$index][$index]",ng-required="{true}")
+                    span.reduce.btn-warning(type="button",ng-click="reduceClassify($index)") 删除
+                    span.reduce.btn-primary(type="button",ng-click="addClass($index)") 添加
+        tr
+            td 商品主属性选择的值
+            td
+                input(type="text",ng-model="myShop.select")
+        tr
+            td 商品详情图片外关联(不关联:请输入本ID值,并上传相关图片;关联：输入外联ID)
+            td
+                input(type="number",ng-model="myShope.shopDetails[0]")
+        tr
+            td 商品详情图片数量
+            td
+                input(type="number",ng-model="myShop.shopDetails[1]",ng-required="{true}")
+        tr
+            td 上传商品详情图片(最多10张)
+            td
+                imgs(name="",max_numb="10",min_numb="0",type="file",bind_numb="myShop.shopDetails[1]")
+    table.params(ng-repeat="values in myShop.parameter track by $index",class="none{{$index}}")
+        tr(ng-if="$index % 2 ==0")
+            th(colspan="2",ng-click="paramsShow($index+1)")
+                input(type="text",ng-model="myShop.parameter[$index]",ng-required="{true}")
+            th
+                a(ng-click="addParameter($index+1)") 添加
+                a(ng-click="removeParameter($index)") 删除
+        tr(ng-if="$parent.$index % 2 ==1&&$index % 2 ==0",ng-repeat="value in values track by $index")
+            td.name
+                input(type="text",ng-model="myShop.parameter[$parent.$parent.$index][$index]",ng-required="{true}")
+            td.val
+                input(type="text",ng-model="myShop.parameter[$parent.$parent.$index][$index+1]",ng-required="{true}")
+            td
+                a(ng-click="removeParameterArray($parent.$parent.$index,$parent.$index)") 删除
+    table
+        tr
+            td
+                input.auto.btn.btn-primary(type="button",ng-click="pushParameter()",value="添加")
+    input.submit.btn.btn-primary(ng-disabled="myForm.$invalid",type="submit",value="保存修改",ng-click="submit(true)")
+div(ng-if="!enteringId") 请先登陆后操作

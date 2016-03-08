@@ -1,0 +1,275 @@
+html{overflow:hidden;}
+.body {
+  height: 665px;
+}
+
+.message {
+  color: #449D44;
+  font-weight: bold;
+  font-size: 25px;
+  margin: auto;
+  position: relative;
+  left: 30%;
+}
+
+.right {
+  float: right;
+}
+
+.auto {
+  margin-left: 10%;
+}
+
+.ng-dirty.ng-invalid {
+  border-color: #FF0000;
+
+}
+
+.top {
+  width: 100%;
+  height: 13%;
+  background-color: #DEDEDE;
+  .logo {
+    cursor: pointer;
+    margin-left: 50px;
+    line-height: 88px;
+    font-size: 30px;
+    font-style: oblique;
+    text-shadow: 5px 5px 5px #FF0000;;
+  }
+  .user {
+    line-height: 88px;
+    float: right;
+    span {
+      height: 32px;
+      margin-right: 20px;
+      input {
+        line-height: 32px;
+        height: 30px;
+      }
+    }
+  }
+  .login {
+    cursor: pointer;
+    line-height: 88px;
+    float: right;
+    font-size: 30px;
+  }
+}
+em{
+  color: #E89898;
+}
+.main {
+  .classify {
+    input {
+      width: 10%;
+      margin-left: 15px;
+    }
+    input:nth-child(1) {
+      width: 20%;
+    }
+    span {
+      width: 28px;
+      height: 16px;
+      margin-left: 5px;
+    }
+  }
+  width: 100%;
+  height: 87%;
+  background-color: #006EC8;
+  .left {
+    width: 20%;
+    height: 100%;
+    background-color: #424242;
+    float: left;
+    a {
+      display: block;
+      text-decoration: none;
+    }
+    a, span {
+      padding-left: 10px;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid;
+      border-color: #424242;
+      border-top-color: #626262;
+      border-bottom-color: #232323;
+      color: #FFFFFF;
+    }
+    span {
+      display: block;
+      font-size: 25px;
+      background-color: #212121;
+    }
+    a:hover {
+      color: #DEDEDE;
+    }
+    .select {
+      background-color: #625F5F;
+    }
+  }
+  .right {
+    background-color: #FFFFFF;
+    overflow: auto;
+    width: 80%;
+    height: 100%;
+    float: right;
+    padding: 40px;
+    .shops {
+      border: 1px solid #D9D9D9;
+      background-color: #FFFCF1;
+      height: 100px;
+      div {
+        overflow: hidden;
+        margin-left: 40px;
+        line-height: 100px;
+        display: inline-block;
+        span:nth-child(1) {
+          font-weight: bold;
+          color: #E79E9E;
+        }
+      }
+      img {
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+      }
+      .searchText {
+        height: 100px;
+        width: 250px;
+      }
+      .displayName {
+        height: 100px;
+        width: 370px;
+      }
+      .price {
+        height: 100px;
+        width: 70px;
+      }
+
+    }
+
+    .submit {
+      margin-top: 30px;
+      margin-left: 30%;
+    }
+  }
+  .revise {
+    input {
+      border: 0px;
+    }
+  }
+  .add {
+  }
+  table {
+    a {
+      cursor: pointer;
+    }
+    input {
+      height: 23px;
+      width: 80%;
+    }
+    input.ng-dirty.ng-invalid {
+      border: 1px solid #FF0000;
+    }
+    width: 80%;
+    tr {
+      width: 100%;
+      td:nth-child(1) {
+        width: 45%;
+      }
+      td:nth-child(2) {
+        width: 45%;
+      }
+      td:nth-child(3) {
+        width: 10%;
+      }
+      th {
+        background-color: #F0F0F0;
+        input {
+          background-color: #F0F0F0;
+          width: 210px;
+        }
+
+      }
+      th:nth-child(1) {
+        cursor: pointer;
+        width: 80%;
+      }
+      th:nth-child(2) {
+        width: 20%;
+        a {
+          float: right;
+          margin-right: 10px;
+        }
+      }
+    }
+
+  }
+  .reduce {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  }
+  .none {
+    * {
+      display: none;
+    }
+  }
+  .express {
+    div{
+      overflow: hidden;
+    }
+    .row {
+      border: 1px solid #D1D1D1;
+    }
+    .head {
+      cursor: pointer;
+      height: 50px;
+      background-color: #B2B2B2;
+      line-height: 50px;
+      font-size: 20px;
+    }
+    .info1, .info2, .title {
+      height: 35px;
+      line-height: 35px;
+    }
+    .title {
+cursor: pointer;
+      height: 30px;
+      line-height: 30px;
+      background-color: #E5E5E5;
+      div {
+        font-weight: bold;
+        width: 200px;
+        margin-left: 40%;
+      }
+    }
+    .expressShops {
+      background-color: #F0F0F0;
+    }
+    .expressShop {
+      height: 70px;
+      background-color: #FFFCF1;
+      line-height: 70px;
+      div {
+        img {
+          cursor: pointer;
+          width: 60px;
+        }
+      }
+    }
+    .shop {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.none {
+  display: none;
+}
+
+.none1 {
+  display: none;
+}

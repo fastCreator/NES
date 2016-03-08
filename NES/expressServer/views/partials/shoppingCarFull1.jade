@@ -1,0 +1,54 @@
+script shopingNavChange(1);
+div.center.shoppingCarFull.page1
+    div.carTip
+        span.glyphicon.glyphicon-shopping-cart 购物车 送货地址：
+            location
+
+        a.right(ui-sref="index") <返回继续购物
+    div.shopCarList
+        div.row.shopTitle
+            div.col-md-1
+                input(type="checkbox" ng-model="checkAll()" ng-click="checkChange()")
+                span 全选
+            div.col-md-2.col-md-offset-1商品信息
+            div.col-md-1.col-md-offset-1 单价
+            div.col-md-1.col-md-offset-1 数量
+            div.col-md-1.col-md-offset-1 小计
+            div.col-md-1.col-md-offset-1 操作
+        div.row.shopMain(ng-repeat="item in items")
+            div.col-md-1
+                input(type="checkbox" ng-model="item.checked")
+                span 选择
+            div.col-md-1
+                div
+                    img(title="点击跳到商品详情",src="/images/shops/{{item.myId}}_1_200x200.jpg",ng-click="toshop(item.myId)")
+            div.col-md-2
+                span(ng-bind="item.info")
+            div.col-md-1.col-md-offset-1(ng-bind="'¥'+item.price")
+            div.col-md-2
+                div.inputNumber
+                    div.reduce(ng-click="reduce($index)")
+                        span -
+                    input#spinner(name="value" ng-model="item.numb")
+                    div.add(ng-click="add($index)")
+                        span +
+            div.col-md-1.col-md-offset-1(ng-bind="'¥'+(item.numb*item.price).toFixed(2)")
+            div.col-md-1.col-md-offset-1
+                a(ng-click="delete($index)") 删除
+        div#fixPay.center
+            div.top
+                div.left
+                    input(type="checkbox" ng-model="checkAll()" ng-click="checkChange()")
+                    span 全选
+                div.right
+                    span 商品总金额：
+                    span ¥{{allPrice()}}
+                    br
+                    span 运费：
+                    span ¥{{fare}}
+            div.bottom
+                div.right
+                    span 商品应付金额：
+                    span ¥{{allPrice()+fare}}
+                    span(ui-sref="shoppingCar.shoppingcarFull2") 结算
+div.address.center

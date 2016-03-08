@@ -1,0 +1,32 @@
+script shopingNavChange(3);
+link(rel='stylesheet', href='/stylesheets/partials/shop3.css')
+div.top
+    div.center 收银台
+div.bottom
+    div
+        div.info.center
+            div.left
+                span 合并支付|共
+                em {{shop.length}}
+                span 笔订单
+                a(href="/#/shoppingCar1") 详情
+            div.right
+                span 需要支付
+                em {{allPrice()+fare}}
+                span 元
+        div.center.main
+            div.payment
+                div.select
+                    input(type="radio",name="payment",checked="checked",value="0" )
+                    span 账户可用余额
+                    em {{myMoney}}
+                    span 元
+                div.select
+                    input(type="radio",name="payment",value="1",disabled="disabled")
+                    span 支付宝支付
+            div.pay
+                span 请输入支付密码:
+                input(type="password",ng-model="password")
+                input.btn-primary(type="button",value="确定",ng-click="buy()")
+                span.message {{message}}
+

@@ -1,0 +1,27 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodb": {
+    "url": "mongodb://localhost:27017/NESDB",
+    "name": "mongodb",
+    "connector": "mongodb"
+  },
+  "email": {
+    "name": "email",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.qq.com",
+        "port": "465",
+        "secure": "ssl",
+        "auth": {
+          "user": "237625092@qq.com",
+          "pass": "p26220062"
+        }
+      }
+    ]
+  }
+}

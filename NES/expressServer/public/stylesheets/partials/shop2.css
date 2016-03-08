@@ -1,0 +1,33 @@
+.placeList {
+  height: 370px;
+  border: 1px solid #DDDDDD;
+  padding-top: 30px;
+  padding-left: 50px; }
+  .placeList .row {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px; }
+    .placeList .row div:nth-child(1) {
+      text-align: right; }
+      .placeList .row div:nth-child(1) em {
+        position: relative;
+        top: 7px;
+        font-size: 20px;
+        margin-right: 5px;
+        color: #FF0000; }
+    .placeList .row input, .placeList .row select {
+      height: 30px;
+      border-radius: 5px; }
+    .placeList .row .a {
+      display: block;
+      width: 124px;
+      height: 34px;
+      color: #ffffff;
+      background-color: #FC9300;
+      border: 1px solid #EF7700;
+      font-weight: 700;
+      font-size: 14px;
+      padding-top: 5px;
+      text-align: center; }
+
+/*# sourceMappingURL=shop2.css.map */

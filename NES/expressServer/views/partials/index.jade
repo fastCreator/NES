@@ -1,0 +1,81 @@
+div#ng-header.center
+    logo
+    search
+mynav
+div#list1.center
+    div
+        span.glyphicon.glyphicon-th-list.goTop
+        全部商品分类
+div#first-screen.center
+    div.left
+        goodslist
+    div.right
+        section#dg-container.dg-container
+            div.dg-wrapper
+                -for(var i=0;i<=11;i++){
+                    a
+                        img(src="/images/firstScreen/"+i+".jpg")
+                -}
+                    div
+            nav
+                span.dg-prev.glyphicon.glyphicon-menu-left
+                span.dg-next.glyphicon.glyphicon-menu-right
+    ul#leftNav.navShow
+        li.a1(name=1)
+            a &#107
+            a 服饰百货
+        li(name=2)
+            a &#114
+            a 手机通讯
+        li(name=3)
+            a &#119
+            a 生活日用
+        li(name=4)
+            a &#100
+            a 食品酒水
+        li(name=5)
+            a &#533
+            a 母婴玩具
+        li(name=6)
+            a &#34
+            a 美妆个护
+        li(name=7)
+            a &#119
+            a 电脑数码
+        li(name=8)
+            a &#118
+            a 家用电器
+        li(name=9)
+            a &#546
+            a 家装建材
+        li(name=10)
+            a &#113
+            a 图书音像
+div#ad1.center
+    img(src="/images/ad1.jpg")
+-var items=[{"name":"服装百货"},{"name":"手机通讯"},{"name":"生活日用"},{"name":"食品酒水"},{"name":"母婴玩具"},{"name":"美妆个护"},{"name":"电脑数码"},{"name":"家用电器"},{"name":"家装建材"},{"name":"图书音像"}]
+
+each item,i in items
+    div.center(id="floor#{i+1}")
+        div.floor-head
+            div.title
+                h3
+                    b #{i+1}F
+                    =item.name
+                h4
+            ul.tab
+                li.on(id="selectable-floor#{i+1}1") 热门活动
+                li(id="selectable-floor#{i+1}2") 猜你喜欢
+            div.link
+        div.floor-main
+            div.side
+                img(src="/images/floor/#{i+1}left.jpg")
+            div.main-col
+                img(src="/images/floor/#{i+1}right1.jpg")
+            div.main-col
+                img(src="/images/floor/#{i+1}right2.jpg")
+div#help
+    div.center
+        img(src="/images/help.jpg")
+include footer
+script(src='/javascripts/app/dist/index.min.js')

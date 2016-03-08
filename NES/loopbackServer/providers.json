@@ -1,0 +1,92 @@
+{
+    "local": {
+        "provider": "local",
+        "module": "passport-local",
+        "usernameField": "username",
+        "passwordField": "password",
+        "authPath": "/auth/local",
+        "successRedirect": "/auth/account",
+        "failureRedirect": "/local",
+        "failureFlash": true
+    },
+    "qq-login": {
+        "provider": "qq",
+        "module": "passport-qq",
+        "clientID": "100312028",
+        "clientSecret": "{qq-client-secret-1}",
+        "callbackURL": "/auth/qq/callback",
+        "authPath": "/auth/qq",
+        "callbackPath": "/auth/qq/callback",
+        "successRedirect": "/auth/account",
+        "failureRedirect": "/login",
+        "scope": ["user"],
+        "failureFlash": true
+    },
+    "github-login": {
+        "provider": "github",
+        "module": "passport-github",
+        "clientID": "60afaeb8fac0ed512bbc",
+        "clientSecret": "804b8597d6bd14bbabdac301fd7857710cd11f97",
+        "callbackURL": "http://localhost:3000/login/github",
+        "state": "text",
+        "scope": "user",
+        "authPath": "/auth/github",
+        "callbackPath": "http://localhost:3000/login/github",
+        "failureFlash": true
+    },
+    "weixin-login": {
+        "provider": "weixin",
+        "module": "passport-weixin",
+        "clientID": "100312028",
+        "clientSecret": "{weixin-client-secret-1}",
+        "callbackURL": "/auth/weixin/callback",
+        "authPath": "/auth/weixin",
+        "callbackPath": "/auth/weixin/callback",
+        "successRedirect": "/auth/account",
+        "failureRedirect": "/login",
+        "scope": ["user"],
+        "state":"text",
+        "failureFlash": true
+    },
+    "sina-login": {
+        "provider": "sina",
+        "module": "passport-sina",
+        "clientID": "100312028",
+        "clientSecret": "{sina-client-secret-1}",
+        "callbackURL": "/auth/sina/callback",
+        "authPath": "/auth/sina",
+        "callbackPath": "/auth/sina/callback",
+        "successRedirect": "/auth/account",
+        "failureRedirect": "/login",
+        "scope": ["user"],
+        "failureFlash": true
+    },
+    "qq-link": {
+        "provider": "qq",
+        "module": "passport-qq",
+        "clientID": "100312028",
+        "clientSecret": "{qq-client-secret-2}",
+        "callbackURL": "/link/qq/callback",
+        "authPath": "/link/qq",
+        "callbackPath": "/link/qq/callback",
+        "successRedirect": "/auth/account",
+        "failureRedirect": "/login",
+        "scope": ["email", "user_likes"],
+        "link": true,
+        "failureFlash": true
+    },
+    "weixin-link": {
+        "provider": "weixin",
+        "module": "passport-weixin",
+        "clientID": "100312028",
+        "clientSecret": "{weixin-client-secret-2}",
+        "callbackURL": "/link/weixin/callback",
+        "authPath": "/link/weixin",
+        "callbackPath": "/link/weixin/callback",
+        "successRedirect": "/auth/account",
+        "failureRedirect": "/login",
+        "scope": ["email", "user_likes"],
+        "link": true,
+        "failureFlash": true
+    }
+}

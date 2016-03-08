@@ -1,0 +1,24 @@
+extends layout
+block content
+    div.main
+        form(name="myForm")
+            div.input
+                span 用户名：
+                -if(username)
+                    input.username(type="text",value="#{username}",disabled="true")
+                -else
+                    input(type="text",placeholder="请输入8位以下字符",ng-model="data.username",ng-maxlength="8",ng-required="{true}")
+            div.input
+                span 邮箱地址：
+                -if(message)
+                    input.email(type="text",value="#{message}",disabled="true")
+                 -else
+                    input( placeholder="请输入您的邮箱",type="email",name="email",ng-model="data.email",ng-required="{true}")
+            div.input
+                span 设置密码：
+                input(type="password",placeholder="请输入6到10位字母或数字",ng-model="data.password",ng-required="{true}",ng-pattern="/\\w{6,10}/")
+            input.register(type="submit", value="同意协议并注册" ,ng-disabled="myForm.$invalid",ng-click="register()")
+
+block scripts
+    script(src='/javascripts/app/dist/registerController.min.js')
+    link(rel='stylesheet', href='/stylesheets/register.css')

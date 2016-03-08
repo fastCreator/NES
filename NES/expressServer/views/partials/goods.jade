@@ -1,0 +1,25 @@
+link(rel='stylesheet', href='/stylesheets/partials/goods.css')
+div#ng-header.center
+    logo
+    search
+mynav
+div.nav-bar
+    div.center
+        div.left.goodslist 全部商品分类
+            span.glyphicon.glyphicon-chevron-down
+            goodslist
+        div.right.nav.search
+            span(ui-sref="index") 首页
+            a PPTV互联网电视
+            a 眼霜
+            a 电磁炉
+            a 海尔冰箱
+            a 智能电视
+            a 手机
+            a 牙膏
+            a 牛奶
+div.goodsMain(ui-view="main")
+include footer
+
+
+

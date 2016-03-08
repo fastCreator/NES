@@ -1,0 +1,36 @@
+extends layout
+block scripts
+    link(rel='stylesheet', href='/stylesheets/entering.css')
+    script(src='/javascripts/app/dist/enteringController.min.js')
+
+block content
+    div.body
+        div.top
+            a.logo(href="/") NES商城商户控制台
+            span.message= message
+            form.user(name="userForm",ng-show="!enteringId")
+                span 账号
+                    input(type="text",ng-model="userName" required)
+                span 密码
+                    input(type="password",ng-model="password" required)
+                span
+                    input(type="button",ng-disabled="userForm.$invalid",value="登录",ng-click="login()").btn.btn-primary
+            span.login(title="点击退出登录",ng-if="enteringId",ng-click="logout()") 登录成功！！！！
+        div.main
+            div.left
+                span 商品管理
+                a(href="/shopuser#/list") 我的宝贝
+                a(href="/shopuser#/revise",title="请从我的宝贝中选择") 修改商品
+                a(href="/shopuser#/add") 增加商品
+                a(href="/shopuser#/reduce") 删除商品
+                a(href="/shopuser#/express") 快递商品
+            div.right
+                div.view
+                    div(ng-view)
+
+
+
+
+
+
+

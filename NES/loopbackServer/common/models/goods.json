@@ -1,0 +1,61 @@
+{
+    "name": "goods",
+    "plural": "goods",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "myId": {
+            "type": "string",
+            "required": true
+        },
+        "searchText": {
+            "type": "string"
+        },
+        "D3Numb": {
+            "type": "number"
+        },
+        "imgNumb": {
+            "type": "number",
+            "required": true
+        },
+        "displayName": {
+            "type": "string",
+            "required": true
+        },
+        "introduce": {
+            "type": "string",
+            "required": true
+        },
+        "price": {
+            "type": "number",
+            "required": true
+        },
+        "link": {
+            "type": "array"
+        },
+        "classify": {
+            "type": "array"
+        },
+        "classifyNumb": {
+            "type": "array"
+        },
+        "select": {
+            "type": "string"
+        },
+        "shopDetails": {
+            "type": "array",
+            "required": true
+        },
+        "parameter": {
+            "type": "array",
+            "required": true
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}

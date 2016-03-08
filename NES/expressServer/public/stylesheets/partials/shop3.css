@@ -1,0 +1,72 @@
+.top {
+  background-color: #F9F9F9;
+  margin-top: 30px;
+  height: 50px;
+  font-size: 30px;
+  color: #4374E0;
+  font-weight: bold;
+  border-bottom: 2px solid #D4D4D4; }
+
+.bottom {
+  background-color: #F6F6F6;
+  height: 500px; }
+  .bottom .info {
+    height: 70px;
+    border-bottom: 3px solid #CCCCCC;
+    padding-top: 20px; }
+    .bottom .info .left {
+      width: 300px;
+      font-size: 17px;
+      font-weight: bold;
+      color: #666666; }
+      .bottom .info .left em {
+        color: #FF6600;
+        margin-left: 10px;
+        margin-right: 10px; }
+      .bottom .info .left a {
+        margin-left: 20px; }
+    .bottom .info .right {
+      font-size: 15px;
+      width: 300px;
+      float: right; }
+      .bottom .info .right em {
+        font-weight: bold;
+        font-size: 29px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #FF6600; }
+  .bottom .main {
+    clear: both;
+    border: 1px solid #E8E8E8;
+    background-color: #FFFFFF;
+    border-top-color: #CCCCCC;
+    padding: 30px; }
+    .bottom .main .payment {
+      border-top: 1px solid #E4E4E4; }
+      .bottom .main .payment .select {
+        border-bottom: 1px dashed #E4E4E4;
+        font-size: 15px;
+        height: 45px;
+        line-height: 45px;
+        padding-left: 20px; }
+        .bottom .main .payment .select em {
+          color: #999999;
+          cursor: pointer; }
+    .bottom .main .pay {
+      margin-top: 20px;
+      padding-left: 20px; }
+      .bottom .main .pay input {
+        font-size: 20px;
+        width: 130px;
+        height: 30px;
+        border-radius: 5px;
+        margin-left: 20px; }
+      .bottom .main .pay .btn-primary {
+        width: 70px;
+        padding-left: 10px;
+        padding-right: 10px; }
+      .bottom .main .pay .message {
+        color: #ff0000;
+        margin-left: 10px; }
+
+/*# sourceMappingURL=shop3.css.map */

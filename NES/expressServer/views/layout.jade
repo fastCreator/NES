@@ -1,0 +1,26 @@
+doctype html
+html(ng-app="app" ,ng-controller="LayoutController", lang='en')
+    head
+        title {{title}}
+        base(href='/')
+        meta(charset='uft-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        script(src='/javascripts/vendor/jquery/dist/jquery.min.js')
+        script(src='/javascripts/vendor/jquery-ui/jquery-ui.min.js')
+        script(src='/javascripts/vendor/bootstrap/dist/js/bootstrap.min.js')
+        script(src='/javascripts/vendor/angular/angular.min.js')
+        script(src='/javascripts/vendor/angular-route/angular-route.min.js')
+        script(src='/javascripts/vendor/angular-cookies/angular-cookies.min.js')
+        script(src='/javascripts/vendor/angular-animate/angular-animate.min.js')
+        script(src='/javascripts/vendor/angular-ui-router/release/angular-ui-router.min.js')
+        script(src='/javascripts/vendor/angular-route/angular-route.min.js')
+        script(src='/javascripts/vendor/angular-resource/angular-resource.min.js')
+
+
+        link(rel='stylesheet', href='/stylesheets/vendor/cube.min.css')
+        link(rel='stylesheet', href='/javascripts/vendor/jquery-ui/jquery-ui.min.css')
+        link(rel='stylesheet', href='/javascripts/vendor/jquery-ui/jquery-ui.structure.min.css')
+        link(rel='stylesheet', href='/javascripts/vendor/bootstrap/dist/css/bootstrap.min.css')
+        block scripts
+    body
+        block content

@@ -1,0 +1,16 @@
+div.limit.center
+    span 默认
+    span 销量
+    span 评价
+    span 价格
+ul.column.center
+    li(ng-repeat="shop in shops")
+        img(src="/images/shops/{{shop.myId}}_1_200x200.jpg",ng-click="goShopdetails($index)")
+        a(title="{{shop.displayName}}&nbsp;&nbsp;{{shop.introduce}}" ng-click="goShopdetails($index)")
+            span {{shop.displayName}}&nbsp;&nbsp;
+            span {{shop.introduce}}
+        div.price ¥{{shop.price}}
+        a.discuss 销售量：0
+        a.GOshop(ng-click="goShopdetails($index)") 加入购物车
+div.center.goodsNull(ng-if="!shops")
+    div 非常抱歉！商城数据库建设中，尚没找到“搜索”的相关商品。

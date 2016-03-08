@@ -1,0 +1,79 @@
+div.goodsDetailed
+    input.hiddenmyID(type="hidden",value="{{myshop.myId}}")
+    div.center.top
+        div.left
+            div.imgMain
+                img(src="/images/shops/{{myshop.myId}}_1_800x800.jpg")
+            div.imgList
+                span#imgLeft <
+                div#imgul
+                    ul
+                        li.selectImg
+                            img(src="/images/shops/{{myshop.myId}}_1_800x800.jpg")
+                        -for(var i=2;i<8;i++){
+                        li
+                            img(src="/images/shops/{{myshop.myId}}_"+i+"_800x800.jpg")
+                        -}
+                span#imgRight >
+            div.boost
+                img(src="/images/shops/{{myId}}_1_800x800.jpg")
+        div.right
+            div.displayName {{myshop.displayName}}
+            div.introduce {{myshop.introduce}}
+            div.row.price
+                span.col-md-2 价格
+                span.col-md-10 ¥{{myshop.price}}
+            div.row.assess
+                span.col-md-2 4.7分
+                span.col-md-10 共有14514条评价
+            div.row.server
+                span.col-md-2 服务
+                span.col-md-10 免运费
+            div.row.address
+                span.col-md-2 送至
+                span.col-md-10
+                    location
+            div.row.link(ng-if="myshop.link[0]!=''")
+                span(ng-repeat="link in myshop.link")
+                    span.col-md-2(ng-if="$index==0") {{link}}
+                    span(ng-if="$index>0")
+                        div.img(ng-init="init(this)")
+                            img.selectable(name="{{link}}",src="/images/shops/{{link}}_1_60x60.jpg",ng-click="goLink($event)")
+                            i.glyphicon.glyphicon-ok
+            div.box(ng-if="myshop.classify.length")
+                div.row.classify(ng-repeat="class in myshop.classifyNumb")
+                    span.col-md-2 {{class}}
+                div.classify.class
+                    span(ng-repeat="classify in myshop.classify")
+                        span(ng-click="select($index,$event)") {{classify[0]}}
+                            i.glyphicon.glyphicon-ok
+                div.classify.class.class2(ng-repeat="classify in myshop.classify",ng-show="$index==classifyNumb",ng-if="myshop.classifyNumb[1]")
+                    span(ng-repeat="classify in myshop.classify[$index]")
+                        span(ng-if="$index!=0",ng-click="select2($event)") {{classify}}
+                            i.glyphicon.glyphicon-ok
+
+            br
+            div.row.numb
+                span.col-md-2 购买数量
+                span.col-md-10
+                    span.reduce -
+                    input.numbs(value="1")
+                    span.add +
+            hr
+            div.shopSelect.row(ng-if="myshop.select")
+                span.col-md-2 您已选择
+                span.col-md-10 {{myshop.select}} {{classfiy}} {{class}}
+            div.shop.row
+                span.col-md-2.col-md-offset-1 购买
+                span(ng-click="addShop()").col-md-3.col-md-offset-1 加入购物车
+                img(id="Goshop",src="/images/shops/{{myshop.myId}}_1_200x200.jpg")
+
+    div.center.paging
+        ul.center.pageClick
+            li.clicked(ui-sref="goods.goodDetailed.page1") 商品详情
+            li(ui-sref="goods.goodDetailed.page2") 包装参数
+            li(ui-sref="goods.goodDetailed.page3") 评价（1564）
+            li(ui-sref="goods.goodDetailed.page4") 售后保障
+            li(ui-sref="goods.goodDetailed.page5",ng-show="myshop.D3Numb>0") 3D模型展示
+        div.center(ui-view="")
+

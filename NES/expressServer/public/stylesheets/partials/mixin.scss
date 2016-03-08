@@ -1,0 +1,70 @@
+@mixin transition($transition) {
+  transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -ms-transition: $transition;
+}
+
+@mixin transform($transform) {
+  transform: $transform;
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  -ms-transform: $transform;
+}
+
+@mixin transform-origin($origin) {
+  transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  filter: alpha(opacity=$opacity *100);
+}
+
+@mixin keyframes-index-enter() {
+  @keyframes index-enter {
+    @content;
+  }
+
+  @-moz-keyframes index-enter /* Firefox */
+  {
+    @content;
+  }
+
+  @-webkit-keyframes index-enter /* Safari 和 Chrome */
+  {
+    @content;
+  }
+
+  @-o-keyframes index-enter /* Opera */
+  {
+    @content;
+  }
+}
+
+@mixin keyframes-index-leave() {
+  @keyframes index-leave {
+    @content;
+  }
+
+  @-moz-keyframes index-leave /* Firefox */
+  {
+    @content;
+  }
+
+  @-webkit-keyframes index-leave /* Safari 和 Chrome */
+  {
+    @content;
+  }
+
+  @-o-keyframes index-leave /* Opera */
+  {
+    @content;
+  }
+}

@@ -1,0 +1,11 @@
+div.page2
+    table(ng-repeat="values in myshop.parameter")
+        tr(ng-if="$index % 2 ==0")
+            th(colspan="3",ng-click="show($index)") {{values}}
+        tr(ng-if="$parent.$index % 2 ==1&&$index % 2 ==0",ng-repeat="value in values track by $index")
+            td.name
+                div {{values[$index]}}
+            td.val
+                div {{values[$index+1]}}
+            td.err
+                a 纠错

@@ -1,0 +1,1 @@
+mongod --dbpath=f:\mongodb\data --logpath "f:\mongodb\log\mongodb.log" --logappend

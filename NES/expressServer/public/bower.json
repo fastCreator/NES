@@ -1,0 +1,14 @@
+{
+  "name": "public",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angularjs": "~1.4.5",
+    "angular-cookies": "~1.4.5",
+    "angular-ui-router": "~0.2.15",
+    "angular-route": "~1.4.5",
+    "angular-animate": "~1.4.5",
+    "ngDialog": "~0.3.12",
+    "three.js": "~0.72.0"
+  }
+}

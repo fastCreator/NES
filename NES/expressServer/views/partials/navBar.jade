@@ -1,0 +1,8 @@
+div#ng-nav-bar.right
+    div.top
+        span.glyphicon.glyphicon-user
+    div.center(ui-sref="shoppingCar")
+        span.glyphicon.glyphicon-shopping-cart  购物车
+            div {{items.length||0}}
+    div.buttom
+        span.glyphicon.glyphicon-circle-arrow-up(onclick="if (!$('html,body').is(':animated')) $('html,body').animate({scrollTop: '0px'}, 500); ")

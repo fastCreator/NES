@@ -1,0 +1,14 @@
+div.shops(ng-repeat="shop in shops",ng-if="enteringId")
+    div.img
+        img(src="/images/shops/{{shop.myId}}_1_200x200.jpg",ng-click="goDetailed(shop.myId)")
+    div.searchText
+        span ID:
+        span {{shop.myId}}
+    div.displayName
+        span 商品信息:
+        span {{shop.displayName}}
+    div.price
+        span 价格:
+        span {{shop.price}}
+div(ng-if="!enteringId") 请先登陆后操作
+

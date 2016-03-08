@@ -1,0 +1,41 @@
+div(ng-if="enteringId")
+    div.express(ng-repeat="shops in data")
+        div.row.head(ng-click="none($event)")
+            div.col-md-2 地址：
+            div.col-md-5(title="{{data[$index].address}}") {{data[$index].address}}
+            div.col-md-2 下单时间
+            div.col-md-2 {{data[$index].data}}
+            a.col-md-1(ng-click="deleteOrder($event,$index)") 删除
+        div.none.row.info1
+            div.col-md-3 联系人
+            div.col-md-3 {{data[$index].name}}
+            div.col-md-3 固定电话号码
+            div.col-md-3 {{data[$index].phone}}
+        div.none.row.info2
+            div.col-md-3 运费
+            div.col-md-3 {{data[$index].fare}}
+            div.col-md-3 备注
+            div.col-md-3 {{data[$index].remarks}}
+        div.shop.none
+            div.row.title(ng-click="none1($event)")
+                div.col-md-12 订  货  明  细
+            div.none1.row.expressShops
+                div.col-md-1 序列号
+                div.col-md-2 图片
+                div.col-md-3 商品ID
+                div.col-md-3 商品信息
+                div.col-md-1 数量
+                div.col-md-1 单价
+                div.col-md-1 操作
+            div.none1(ng-repeat="shop in data[$index].shop")
+                div.row.expressShop
+                    div.col-md-1 {{$index+1}}
+                    div.col-md-2
+                        img(src="/images/shops/{{data[$parent.$index].shop[$index].myId}}_1_200x200.jpg")
+                    div.col-md-3 {{data[$parent.$index].shop[$index].myId}}
+                    div.col-md-3 {{data[$parent.$index].shop[$index].info}}
+                    div.col-md-1 {{data[$parent.$index].shop[$index].numb}}
+                    div.col-md-1 {{data[$parent.$index].shop[$index].price}}
+                    a.col-md-1(ng-click="deleteShop($parent.$index,$index)") 删除
+div(ng-if="!enteringId") 请先登陆后操作
+div(ng-if="data.length==0") 尚未有需要快递的商品

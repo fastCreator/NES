@@ -1,0 +1,21 @@
+extends layout
+block scripts
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    script(src='/javascripts/app/dist/grunt.min.js')
+    script(src='/javascripts/app/dist/public.min.js')
+    script(src='/javascripts/vendor/jquery.gallery.js')
+    script(src='/javascripts/vendor/threeJs/three.min.js')
+    script(src='/javascripts/vendor/threeJs/Mirror.js')
+    script(src='/javascripts/vendor/threeJs/MTLLoader.js')
+    script(src='/javascripts/vendor/threeJs/OBJMTLLoader.js')
+    script(src='/javascripts/vendor/threeJs/DDSLoader.js')
+    script(src='/javascripts/vendor/threeJs/stats.min.js')
+    script(src='/javascripts/vendor/threeJs/OrbitControls.js')
+    script(src='/javascripts/vendor/address/selectAddress2.js')
+
+    script(src='/javascripts/vendor/modernizr.custom.53451.js')
+block content
+    include partials/header
+    div.page(class="{{state}}" ui-view)
+
+

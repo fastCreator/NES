@@ -1,0 +1,6 @@
+div(ng-if="enteringId")
+    span 请输入需要删除的商品ID:
+    input.reduceID(type="text")
+    input(type="button",value="确定",ng-click="reduceShop()")
+    span.reduceMessage {{reduceMessage}}
+div(ng-if="!enteringId") 请先登陆后操作

@@ -1,0 +1,68 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models",
+      "../node_modules/loopback-component-passport/lib/models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "AccessToken": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "accessToken": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "userCredential": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "userIdentity": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "user": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Email": {
+    "dataSource": "email"
+  },
+  "goods": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "assess": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "shopuser": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "transport": {
+    "dataSource": "mongodb",
+    "public": true
+  }
+}

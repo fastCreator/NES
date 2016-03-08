@@ -1,0 +1,74 @@
+html{
+  height: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  background-image: url(/images/registerBK.jpg);
+  background-size: 100% 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input {
+  width: 230px;
+  height: 40px;
+}
+
+.main {
+  width: 320px;
+  height: 200px;
+  position:absolute;
+  top:20%;
+  right:40%;
+  background-color: #B8A996;
+  opacity: 0.8;
+  border: 1px solid #DDDDDD;
+  .input {
+    width: 320px;
+    margin: auto;
+    margin-top: 6px;
+    span {
+      color: #FAF8F6;
+      display: inline-block;
+      width: 80px;
+      text-align: right;
+    }
+  }
+}
+
+.register {
+  background-color: #FFDAAC;
+  background: -webkit-repeating-linear-gradient(-60deg, #FF8600 0%, #F4BE7E 20%, #FF8600 40%); /* Safari 5.1 - 6.0 */
+  background: -o-repeating-linear-gradient(-60deg, #FF8600 0%, #F4BE7E 20%, #FF8600 40%); /* Opera 11.1 - 12.0 */
+  background: -moz-repeating-linear-gradient(-60deg, #FF8600 0%, #F4BE7E 20%, #FF8600 40%); /* Firefox 3.6 - 15 */
+  background: linear-repeating-linear-gradient(-60deg, #FF8600 0%, #F4BE7E 20%, #FF8600 40%); /* 标准的语法 */
+  margin: auto;
+  margin-left: 80px;
+  text-align: center;
+  margin-top: 6px;
+  font-weight: bold;
+  color: #FFFFFF;
+  font-size: 24px;
+  border: 0;
+}
+
+.register:hover {
+  background-color: #C9A276;
+  background: -webkit-repeating-linear-gradient(-60deg, #F4BE7E 0%, #FF8600 20%, #F4BE7E 40%); /* Safari 5.1 - 6.0 */
+  background: -o--repeating-linear-gradient(-60deg, #F4BE7E 0%, #FF8600 20%, #F4BE7E 40%); /* Opera 11.1 - 12.0 */
+  background: -moz-repeating-linear-gradient(-60deg, #F4BE7E 0%, #FF8600 20%, #F4BE7E 40%); /* Firefox 3.6 - 15 */
+  background: linear-repeating-linear-gradient(-60deg, #F4BE7E 0%, #FF8600 20%, #F4BE7E 40%); /* 标准的语法 */
+}
+
+.ng-dirty.ng-invalid {
+  border-color: #FF0000;
+}
+
+.point {
+  margin-top: 30px;
+  margin-left: 50px;
+}

@@ -1,0 +1,22 @@
+header
+    div.center
+        ul.left
+            login
+        ul.right
+            li#oder
+                div#myOder 我的订单
+                    span.glyphicon.glyphicon-menu-down
+                div#oderList.left
+                    a#pay 待支付
+                    br
+                    a#revise 待修改
+                    br
+                    a#assess 待评价
+            li#shoppingCar.right(ui-sref-active="active" ui-sref="shoppingCar")
+                span.glyphicon.glyphicon-shopping-cart
+                购物车
+            li#phone
+                span.glyphicon.glyphicon-phone
+                手机商城
+            li(ng-click="go3Dshop()")
+                span.glyphicon.glyphicon-fire 3D商品体验区

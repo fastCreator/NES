@@ -1,0 +1,36 @@
+script shopingNavChange(2);
+link(rel='stylesheet', href='/stylesheets/partials/shop2.css')
+form.page1(name="myForm",ng-submit="false",role="form")
+    h3.center 配送信息
+    div.center.placeList
+            div.row
+                div.col-md-2.col-md-offset-1
+                    em *
+                    label 收货人:
+                div.col-md-3
+                    input(type="text",ng-required="{true}",placeholder="姓名：如，张三,李四",ng-model="name",ng-pattern="/[\u4e00-\u9fa5]{2,6}/")
+            div.row
+                div.col-md-2.col-md-offset-1
+                    em *
+                    label 手机:
+                div.col-md-3
+                    input(type="text",ng-required="{true}",placeholder="请填写11位手机号码",ng-model="phone",ng-maxlength="11",ng-pattern="/\\d{11}/")
+            div.row
+                div.col-md-2.col-md-offset-1
+                    label 电话:
+                div.col-md-3
+                    input(type="text",placeholder="电话号码")
+            div.row
+                div.col-md-2.col-md-offset-1
+                    em *
+                    label 所在地区:
+                div.col-md-6
+                    location
+            div.row
+                div.col-md-2.col-md-offset-1
+                    label 备注:
+                div.col-md-3
+                    input(placeholder="填写特别事项",ng-model="remarks")
+            div.row
+                div.col-md-2.col-md-offset-3
+                    input.btn.btn-primary(type="button",value="确认配送",ng-disabled="myForm.$invalid",ng-click="buy()" )
